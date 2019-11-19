@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Public+Sans:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
     <!-- Main Styles -->
-    <script src="app/js/script.js"></script>
+    <script src="./app/js/script.js"></script>
     <title>Clase 8 - Tarea</title>
 </head>
 
@@ -20,13 +20,13 @@
     </header>
 
     <section>
-        <form id="calculador-edades">
-            <div id="cantidad-familiares">
-                <input type="number" id="cantidad-integrantes" placeholder="Ingresa la cantidad de integrantes">
-                <button type="submit" id="siguiente-paso">Siguiente</button>
+        <form id="age-calculator">
+            <div id="members">
+                <input type="number" id="members-number" placeholder="Ingresa la cantidad de integrantes">
+                <button type="submit" id="next-step">Siguiente</button>
             </div>
 
-            <div id="integrantes">
+            <div id="ages">
                 <h2>Tus datos</h2>
                 <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
                 <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
@@ -34,17 +34,17 @@
                 <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
                 <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
                 <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
-                <button type="button" id="calcular" class="oculto">Calcular</button>
+                <button type="button" id="calculate" class="hidden">Calcular</button>
             </div>
 
 
-            <div id="analisis" class="oculto">
+            <div id="analysis" class="hidden">
                 <h2>Tu informacion</h2>
-                <p>La mayor edad es: <strong id="mayor-edad"></strong></p>
-                <p>La menor edad es: <strong id="menor-edad"></strong></p>
-                <p>El promedio de edad es: <strong id="promedio-edad"></strong></p>
+                <p>La mayor edad es: <strong id="older"></strong></p>
+                <p>La menor edad es: <strong id="younger"></strong></p>
+                <p>El promedio de edad es: <strong id="average-age"></strong></p>
 
-                <button type="reset" id="resetear">Volver al principio</button>
+                <button type="reset" id="reset">Volver al principio</button>
             </div>
         </form>
     </section>
