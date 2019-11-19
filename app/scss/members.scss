@@ -1,6 +1,15 @@
 #members{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     padding: 25px 20px;
+
+    @media screen and (min-width: 1000px){
+        justify-content: space-evenly;
+        padding: 25px 0;
+        border: 1px solid red;
+
+        input{
+            align-self: center;
+        }
+    }
 }
