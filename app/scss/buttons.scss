@@ -3,7 +3,17 @@ button{
     padding: 12px 48px;
     border: none;
     border-radius: 2px;
-    color: $white;
-    background-color: black;
+    background-color: rgb(8, 129, 69);
     box-shadow: 1px 1px 7px rgba(255, 255, 255, 0.25);
+    color: $white;
+    font-size: 1.025rem;
+    text-transform: uppercase;
+
+    &:hover{
+        background-color: rgb(4, 107, 10);
+    }
+    @media screen and (min-width: 1000px){
+        min-width: 30%;
+        font-size: 1.4rem;
+    }
 }
