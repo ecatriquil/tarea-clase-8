@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Public+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+    <!-- Main Styles -->
+    <script src="app/js/script.js"></script>
+    <title>Clase 8 - Tarea</title>
+</head>
+
+<body>
+    <header>
+        <h1>Averigua datos sobre tu familia según sus edades</h1>
+    </header>
+
+    <section>
+        <form id="calculador-edades">
+            <div id="cantidad-familiares">
+                <input type="number" id="cantidad-integrantes" placeholder="Ingresa la cantidad de integrantes">
+                <button type="submit" id="siguiente-paso">Siguiente</button>
+            </div>
+
+            <div id="integrantes">
+                <h2>Tus datos</h2>
+                <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
+                <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
+                <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
+                <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
+                <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
+                <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
+                <button type="button" id="calcular" class="oculto">Calcular</button>
+            </div>
+
+
+            <div id="analisis" class="oculto">
+                <h2>Tu informacion</h2>
+                <p>La mayor edad es: <strong id="mayor-edad"></strong></p>
+                <p>La menor edad es: <strong id="menor-edad"></strong></p>
+                <p>El promedio de edad es: <strong id="promedio-edad"></strong></p>
+
+                <button type="reset" id="resetear">Volver al principio</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>Realizado por &copy; Emanuel Catriquil - 2019</p>
+    </footer>
+    <script src="app/js/app.js"></script>
+</body>
+
+</html>
