@@ -8,7 +8,37 @@ html{
 
 body{
     margin: 0;
-    padding: 0;
-    // background-image: radial-gradient(circle farthest-side at bottom right,$soft-blue 0%,$dark-blue 85%);
-    background-color: $dark-blue;
+    background-image: radial-gradient(circle farthest-side at bottom right,$soft-blue 0%,$dark-blue 85%);
+}
+
+h1,
+h2,
+p{
+    color: $white;
+    
+}
+
+h1,
+h2{
+    font-family: $primary-font;
+}
+
+h1{
+    margin: 0;
+    font-weight: 700;
+}
+
+h2,
+p{
+    font-weight: 400;
+}
+
+p{
+    font-family: $secondary-font;
+}
+
+
+// Helper Classes
+.container{
+    padding: 25px;
 }
