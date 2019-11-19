@@ -6,9 +6,16 @@ input{
     border-radius: 2px;
     box-shadow: 1px 1px 7px rgba(255, 255, 255, 0.25);
     font-family: $secondary-font;
-    font-weight: 500;
-
+    font-weight: 600;
+    font-size: 0.9rem;
     &:focus{
         outline-color: rgb(26, 25, 25);
+    }
+
+    @media screen and (min-width: 1000px){
+        min-width: 30%;
+        margin-bottom: 0;
+        font-size: 1.1rem;
+        font-weight: 500;
     }
 }
