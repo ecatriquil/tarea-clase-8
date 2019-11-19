@@ -1,0 +1,14 @@
+html{
+    min-height: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    // background-image: radial-gradient(circle farthest-side at bottom right,$soft-blue 0%,$dark-blue 85%);
+    background-color: $dark-blue;
+}
