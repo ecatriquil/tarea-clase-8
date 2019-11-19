@@ -15,42 +15,49 @@
 </head>
 
 <body>
-    <header>
-        <h1>Averigua datos sobre tu familia según sus edades</h1>
+    <header class="container">
+        <h1>Age Calculator</h1>
+        <p>Averigua datos sobre tu familia según sus edades</p>
     </header>
 
-    <section>
-        <form id="age-calculator">
-            <div id="members">
-                <input type="number" id="members-number" placeholder="Ingresa la cantidad de integrantes">
-                <button type="submit" id="next-step">Siguiente</button>
-            </div>
+    <section id="main">
+        <div class="container">
+            <form id="age-calculator">
 
-            <div id="ages">
-                <h2>Tus datos</h2>
-                <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
-                <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
-                <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
-                <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
-                <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
-                <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
-                <button type="button" id="calculate" class="hidden">Calcular</button>
-            </div>
+                <div id="members">
+                    <input type="number" id="members-number" placeholder="Ingresa la cantidad de integrantes">
+                    <button type="submit" id="next-step">Siguiente</button>
+                </div>
+
+                <div id="ages">
+                    <h2>Tus datos</h2>
+                    <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
+                    <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
+                    <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
+                    <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
+                    <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
+                    <input type="number" name="" id="" placeholder="Ingresa la edad de tu familiar">
+                    <button type="button" id="calculate" class="hidden">Calcular</button>
+                </div>
 
 
-            <div id="analysis" class="hidden">
-                <h2>Tu informacion</h2>
-                <p>La mayor edad es: <strong id="older"></strong></p>
-                <p>La menor edad es: <strong id="younger"></strong></p>
-                <p>El promedio de edad es: <strong id="average-age"></strong></p>
+                <div id="analysis" class="hidden">
+                    <h2>Tu informacion</h2>
+                    <p>La mayor edad es: <strong id="older"></strong></p>
+                    <p>La menor edad es: <strong id="younger"></strong></p>
+                    <p>El promedio de edad es: <strong id="average-age"></strong></p>
 
-                <button type="reset" id="reset">Volver al principio</button>
-            </div>
-        </form>
+                    <button type="reset" id="reset">Volver al principio</button>
+                </div>
+
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>Realizado por &copy; Emanuel Catriquil - 2019</p>
+        <div class="container">
+            <p>Realizado por &copy; Emanuel Catriquil - 2019</p>
+        </div>
     </footer>
     <script src="app/js/app.js"></script>
 </body>
