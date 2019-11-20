@@ -5,16 +5,19 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel index.html",
-    "prod" : "parcel bundle index.html"
+    "prod": "parcel bundle index.html",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "homepage": "https://ecatriquil.github.io/website-new",
   "devDependencies": {
     "sass": "^1.23.3"
   },
   "dependencies": {
     "autoprefixer": "^9.7.1",
+    "gh-pages": "^2.1.1",
     "postcss-modules": "^1.4.1"
   }
 }
