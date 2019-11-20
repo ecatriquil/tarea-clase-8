@@ -1,5 +1,6 @@
 #ages{
     padding: 12px 20px;
+
     &-container{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
