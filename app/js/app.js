@@ -7,63 +7,60 @@ la menor edad y el promedio del grupo familiar.
 Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente,
  borrando los inputs ya creados (investigar cómo en MDN).
 */
+import './calculos-mio.js';
 
-document.querySelector('#siguiente-paso').onclick = function(event) {
-    const $cantidadIntegrantes = document.querySelector('#cantidad-integrantes');
-    const cantidadIntegrantes = Number($cantidadIntegrantes.value);
+document.querySelector('#next-step').onclick = function(event) {
+    const $membersNumber = document.querySelector('#members-number');
+    const membersNumber = Number($membersNumber.value);
   
     borrarIntegrantesAnteriores();
-    crearIntegrantes(cantidadIntegrantes);
+    crearIntegrantes(membersNumber);
   
     event.preventDefault();
   };
   
-  document.querySelector('#calcular').onclick = function(event) {
+  document.querySelector('#calculate').onclick = function(event) {
     const numeros = obtenerEdadesIntegrantes();
-    mostrarEdad('mayor', obtenerMayorNumero(numeros));
-    mostrarEdad('menor', obtenerMenorNumero(numeros));
-    mostrarEdad('promedio', obtenerPromedio(numeros));
+    
+    mostrarEdad('older', obtenerMayorNumero(numeros));
+    mostrarEdad('younger', obtenerMenorNumero(numeros));
+    mostrarEdad('average-age', obtenerPromedio(numeros));
     mostrarResultados();
   
     event.preventDefault();
   };
   
-  document.querySelector('#resetear').onclick = resetear;
+  document.querySelector('#reset').onclick = resetear;
   
   function borrarIntegrantesAnteriores() {
     const $integrantes = document.querySelectorAll('.integrante');
+    
     for (let i = 0; i < $integrantes.length; i++) {
       $integrantes[i].remove();
     }
   }
   
-  function crearIntegrantes(cantidadIntegrantes) {
+  function crearIntegrantes(membersNumber) {
   
-    if (cantidadIntegrantes > 0) {
+    if (membersNumber > 0) {
       mostrarBotonCalculo();
     } else {
       resetear();
     }
   
-    for (let i = 0; i < cantidadIntegrantes; i++) {
+    for (let i = 0; i < membersNumber; i++) {
       crearIntegrante(i);
     }
   }
   
   function crearIntegrante(indice) {
-    const $div = document.createElement('div');
-    $div.className = 'integrante';
-  
-    const $label = document.createElement('label');
-    $label.textContent = 'Edad del integrante #: ' + (indice + 1);
+    const $div = document.querySelector('#ages-container');
+    
     const $input = document.createElement('input');
     $input.type = 'number';
-  
-    $div.appendChild($label);
+    $input.placeholder = 'Edad del integrante #: ' + (indice + 1);
+    $input.className = 'integrante';
     $div.appendChild($input);
-  
-    const $integrantes = document.querySelector('#integrantes');
-    $integrantes.appendChild($div);
   }
   
   function resetear() {
@@ -73,34 +70,67 @@ document.querySelector('#siguiente-paso').onclick = function(event) {
   }
   
   function ocultarBotonCalculo() {
-    document.querySelector('#calcular').className = 'oculto';
+    document.querySelector('#calculate').className = 'hidden';
   }
   
   function mostrarBotonCalculo() {
-    document.querySelector('#calcular').className = '';
+    document.querySelector('#calculate').className = '';
   }
   
   function ocultarResultados() {
-    document.querySelector('#analisis').className = 'oculto';
+    document.querySelector('#analysis').className = 'hidden';
   }
   
   function mostrarResultados() {
-    document.querySelector('#analisis').className = '';
+    document.querySelector('#analysis').className = '';
   }
   
   function mostrarEdad(tipo, valor) {
-    document.querySelector(`#${tipo}-edad`).textContent = valor;
+    document.querySelector(`#${tipo}`).textContent = valor;
   }
   
   function obtenerEdadesIntegrantes() {
-    const $integrantes = document.querySelectorAll('.integrante input');
+    const $integrantes = document.querySelectorAll('#ages-container input');
+  
     const edades = [];
     for (let i = 0; i < $integrantes.length; i++) {
       edades.push(Number($integrantes[i].value));
     }
+    
     return edades;
   }
   
+
+  function obtenerMayorNumero(numeros) {
+    let mayorNumero = numeros[0];
+    for (let i = 1; i < numeros.length; i++) {
+      if (numeros[i] > mayorNumero) {
+        mayorNumero = numeros[i];
+      }
+    }
+  
+    return mayorNumero;
+  }
+  
+  function obtenerMenorNumero(numeros) {
+    let menorNumero = numeros[0];
+    for (let i = 1; i < numeros.length; i++) {
+      if (numeros[i] < menorNumero) {
+        menorNumero = numeros[i];
+      }
+    }
+  
+    return menorNumero;
+  }
+  
+  function obtenerPromedio(numeros) {
+    let acumulador = 0;
+    for (let i = 0; i < numeros.length; i++) {
+      acumulador += numeros[i];
+    }
+  
+    return (acumulador / numeros.length).toFixed(2);
+  }
   /*
   TAREA:
   Crear una interfaz que permita agregar ó quitar (botones agregar y quitar) inputs+labels para completar el salario anual de cada integrante de la familia que trabaje.
@@ -108,4 +138,3 @@ document.querySelector('#siguiente-paso').onclick = function(event) {
   
   Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como 0).
   */
-  
