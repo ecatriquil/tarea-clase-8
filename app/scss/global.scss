@@ -28,6 +28,10 @@ h1{
     font-weight: 700;
 }
 
+h2{
+    font-size: 2rem;
+}
+
 h2,
 p{
     font-weight: 400;
@@ -42,4 +46,11 @@ p{
 // Helper Classes
 .container{
     padding: 25px 25px 0 25px;
+}
+
+
+@media screen and (min-width : 1000px){
+    h2{
+        font-size: 2.75rem;
+    }
 }
